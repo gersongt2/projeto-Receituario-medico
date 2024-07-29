@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>receituário médico</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="assets/js/verificaçao.js"></script>
+</head>
+<style>
+    body{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    html{
+        width: 100%;
+    }
+    .label{
+        margin-left: 124px;
+    }
+    fieldset{
+        width: 500px;
+
+    }
+</style>
+<body  class="p-3 mb-2 bg-secondary-subtle text-emphasis-secondary">
+    <form  method="get" action="Receituario.html">
+
+        <fieldset>
+            <legend class="label">Preenchendo o Receituário</legend>
+                <label class="label">
+                    Nome do Paciente<br/>
+                    <input type="text" autocomplete="off" required minlength="5" id="NP" name="NP"/>
+                </label><br/>
+
+                <label class="label">
+                idade<br/>
+                <input type="number" autocomplete="off" required min="18" name="idade" id="idade"/>
+                </label><br/> 
+                        
+
+                <label class="label"  >
+                    <div>Cidade:</div>
+                    <select required id="cidade" name="cidade">
+                    <option value=""></option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                    </select>
+                </label><br/> 
+
+                <label class="label"  >Endereço: <br>
+                <input type="text" id="ED" autocomplete="off" name="ED"  required class="endereco"> <br>  
+                </label>
+                
+
+                <label class="label"  >Nome do Médico: <br>
+                <input type="text" id="NM" autocomplete="off" name="NM"  min="5" required><br>
+                </label><br>
+                                
+                <label class="label"   >Telefone: <br>
+                <input type="text" id="TL" autocomplete="off" name="TL"  maxlength="11" required>
+                </label> <br>
+
+                <label class="label"   >
+                    <div>UF:</div>
+                    <select id="UF" name="UF" required >
+                    <option value=""></option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                    </select>
+                </label><br/> 
+
+                <label class="label"  >CRM: <br>
+                <input type="text" id="CRM" autocomplete="off" name="CRM" maxlength="6"required><br>
+                </label><br>
+                
+
+                <label class="label"  >Prescrição Médica: <br>
+                <textarea class="form-control" id="PM" name="PM" rows="6" required style="resize: none; width: 400px;"> </textarea><br>
+                </label> <br>
+            
+
+
+                <label class="label"  >Local de Atendimento: <br>
+                <input type="text" id="LA" autocomplete="off" name="LA"  required><br>
+                </label><br>
+                
+
+                <label class="label"  >CNES: <br>
+                <input type="text" id="CNES" autocomplete="off" name="CNES" maxlength="15" required><br>
+                </label><br>
+
+                <label class="label"   >Data de Emissão: <br>
+                <input type="date" id="DEM" autocomplete="off" name="DEM"  required><br>
+                </label><br>
+
+                <div class="d-grid gap-2 col-6 mx-auto" style="margin-top:20px;">
+                <button class="btn btn-dark" id="submit" type="submit" >Proximo</button><br>
+                </div>
+
+                
+        </fieldset>
+   
+        
+                <footer>Pagina criada por : Gerson Silva Carneiro <br>
+                pra fins estudantis
+                </footer>  
+    
+
+    </form>
+
+
+    
+    
+
+<script src="https://code.jquery.com/jquery-3.7.1.js"integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="crossorigin="anonymous" ></script>
+
+<Script>
+
+//Fazendo  verficaçao se um numero ou nao com jquery
+
+$(document).ready(function() {
+  // Adiciona um ouvinte de evento ao campo de entrada
+  $("#TL").on("input", function(){ 
+    // Obtém o valor do campo de entrada
+    var valor = $(this).val();
+
+    // Verifica se o valor é um número
+    if (isNaN(valor)) {
+      $(this).val("");
+      $(alert("Por favor Digite numeros"))
+
+    }
+  });
+
+
+
+  $("#CNES").on("input", function(){ 
+    var valor = $(this).val();
+
+    if (isNaN(valor)) {
+      $(this).val("");
+      $(alert("Por favor Digite numeros"))
+    }
+  });
+
+
+
+  $("#CRM").on("input", function(){ 
+    var valor = $(this).val();
+
+    if (isNaN(valor)) {
+      $(this).val("");
+      $(alert("Por favor Digite numeros"))
+    }
+  });
+
+  
+});
+
+</Script>
+<script src="assets/js/imprimir.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+.RD{
+ margin-top: 100px;
+ margin-left: 500px;
+
+
+}
+div{
+   margin-bottom: 20px;
+    width: 600px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+span{
+    font-weight: bolder;
+}
+
+footer{
+    margin-left: 120px;
+}
